@@ -10,21 +10,6 @@ const characters = {};
 
 // our socketio instance
 let io;
-
-// Possible directions a user can move
-// their character. These are mapped
-// to integers for fast/small storage
-const directions = {
-  DOWNLEFT: 0,
-  DOWN: 1,
-  DOWNRIGHT: 2,
-  LEFT: 3,
-  UPLEFT: 4,
-  RIGHT: 5,
-  UPRIGHT: 6,
-  UP: 7,
-};
-
 // function to notify everyone when a user has been hit
 const handleAttack = (userHash) => {
   io.sockets.in('room1').emit('attackHit', userHash);
@@ -66,10 +51,10 @@ const setupSockets = (ioServer) => {
       // notify everyone of the user's updated movement
       io.sockets.in('room1').emit('updatedMovement', characters[socket.hash]);
     });
-      
+
     setInterval(() => {
-        let gravity = 15;
-        io.sockets.in('room1').emit('gravity', gravity);
+      const gravity = 15;
+      io.sockets.in('room1').emit('gravity', gravity);
     }, 100);
 
     // when the user disconnects
