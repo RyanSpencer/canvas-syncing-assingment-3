@@ -77,7 +77,7 @@ const addGravity = (data) => {
 const jump = () => {
     if (!jumping) {
         jumping = true;
-        i = 20;
+        i = 10;
     } 
 };
 
