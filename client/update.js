@@ -64,7 +64,7 @@ const addGravity = (data) => {
     }
     
     if (jumping) {
-        square.destY -= 30;
+        square.destY -= 35;
         i--;
     }
     if (i <= 0) {

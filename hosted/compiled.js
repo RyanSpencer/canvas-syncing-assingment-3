@@ -226,7 +226,7 @@ var addGravity = function addGravity(data) {
 var jump = function jump() {
   if (!jumping) {
     jumping = true;
-    i = 20;
+    i = 10;
   }
 };
 
