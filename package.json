@@ -1,0 +1,35 @@
+{
+  "name": "canvas-syncing-assingment-3",
+  "version": "1.0.0",
+  "description": "Gravity simulated servver side",
+  "main": "server/app.js",
+  "scripts": {
+    "buid": "babel ./client --out-file ./hosted/bundle.js",
+    "watch": "babel --watch ./client --out-file .hosted/bundle.js",
+    "nodemon": "nodemon --watch ./server ./server/app.js",
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \\\"Tests complete\\\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanSpencer/canvas-syncing-assingment-3.git"
+  },
+  "author": "Ryan Spencer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanSpencer/canvas-syncing-assingment-3/issues"
+  },
+  "homepage": "https://github.com/RyanSpencer/canvas-syncing-assingment-3#readme",
+  "dependencies": {
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
